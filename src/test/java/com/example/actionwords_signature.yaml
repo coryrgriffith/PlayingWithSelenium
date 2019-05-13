@@ -1,9 +1,4 @@
 ---
-- name: i open "_webAddress"
-  uid: b604fb0b-7fec-4486-9d96-15debf207b1b
-  parameters:
-  - name: _webAddress
-  body_hash: d41d8cd98f00b204e9800998ecf8427e
 - name: I search for "p1"
   uid: 61e28138-f870-4d15-b43f-d3b7a95026f5
   parameters:
@@ -13,4 +8,19 @@
   uid: 41f5f475-2313-4092-b7df-b24387397b94
   parameters:
   - name: p1
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I click on "HipTest"
+  uid: 9ce50253-7c12-4eed-9b3b-e0ff6366f9ac
+  parameters:
+  - name: HipTest
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I open "http_google_com"
+  uid: ad521668-e3a6-48e5-80ab-ed928d8730ca
+  parameters:
+  - name: http_google_com
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: the url should be "http_hiptest_com"
+  uid: d9f3e3dc-14cf-450d-bbe8-243f0e7c76cf
+  parameters:
+  - name: http_hiptest_com
   body_hash: d41d8cd98f00b204e9800998ecf8427e
