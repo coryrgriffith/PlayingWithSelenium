@@ -1,0 +1,47 @@
+package com.example;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+
+public class Actionwords {
+
+    private WebDriver driver;
+
+    Actionwords() {
+        driver = new ChromeDriver();
+    }
+
+    public void iSearchForP1(String p1) {
+        WebElement element = driver.findElement(By.name("q"));
+        element.clear();
+        element.sendKeys(p1);
+        element.submit();
+    }
+
+    public void aLinkToP1IsShownInTheResults(String p1) {
+        final String matcher = p1;
+
+        (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
+            public Boolean apply(WebDriver d) {
+            return d.findElements(By.partialLinkText(matcher)).size() != 0;
+            }
+        });
+    }
+
+    public void iClickOnHipTest(String hipTest) {
+    	driver.findElement(By.partialLinkText(hipTest)).click();
+    }
+
+    public void iOpenHttpGoogleCom(String httpGoogleCom) {
+    	driver.get(httpGoogleCom);
+    }
+
+    public void theUrlShouldBeHttpHiptestCom(String httpHiptestCom) {
+    	
+    }
+}

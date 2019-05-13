@@ -1,0 +1,16 @@
+---
+- name: i open "_webAddress"
+  uid: b604fb0b-7fec-4486-9d96-15debf207b1b
+  parameters:
+  - name: _webAddress
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I search for "p1"
+  uid: 61e28138-f870-4d15-b43f-d3b7a95026f5
+  parameters:
+  - name: p1
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: A link to "p1" is shown in the results
+  uid: 41f5f475-2313-4092-b7df-b24387397b94
+  parameters:
+  - name: p1
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
